@@ -1,0 +1,1 @@
+<html><head><title>SEPANEL</title></head><body><?php echo '<p>Hello 56022993</p>'; ?></body></html>

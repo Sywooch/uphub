@@ -1,0 +1,14 @@
+<?php
+namespace frontend\controllers;
+use yii;
+use frontend\models\Rent;
+class RentController extends Controller
+{
+
+ public function actionGetrent($id)
+    {
+        $this->findModel($id);
+       echo json_encode($this);
+    }
+
+}

@@ -1,0 +1,29 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+$asset = frontend\assets\AppAsset::register($this);
+$baseUrl = $asset->baseUrl;
+/* @var $this yii\web\View */
+/* @var $model frontend\models\Room */
+/* @var $form yii\widgets\ActiveForm */
+?>
+
+<div class="room-form">
+
+    <?php $form = ActiveForm::begin(); ?>
+    
+    <?= $form->field($model, 'floor')->textInput(['type'=>'number','name'=>'floor[]','min' =>'1','value' => '','id' =>'inp']) ?>
+	<button onclick="myFunction()" class ="btn btn-primary">Add</button><br>
+<p id="demo"></p>
+    
+    
+
+
+    <div class="form-group">
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
+</div>
